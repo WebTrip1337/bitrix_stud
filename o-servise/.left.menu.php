@@ -9,14 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Контакты", 
-		"/o-servise/kontakty/index.php", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Обратная связь", 
-		"/o-servise/kontakty/obratnaya-svyaz.php", 
+		"/o-servise/kontakty/", 
 		Array(), 
 		Array(), 
 		"" 
