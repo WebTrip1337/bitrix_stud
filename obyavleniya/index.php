@@ -104,6 +104,7 @@ $APPLICATION->SetTitle("Объявления");
 			0 => "",
 			1 => "",
 		),
+		"DISPLAY_TITLE" => "Новые объекты недвижимости для вас",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "#SECTION_CODE#/",
