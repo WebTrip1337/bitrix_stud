@@ -34,13 +34,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"CSite::InGroup(array(1,6))" 
-	),
-	Array(
-		"Профиль", 
-		"/user/", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>

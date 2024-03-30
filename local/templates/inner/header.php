@@ -78,6 +78,7 @@ IncludeTemplateLangFile(__FILE__);
 						</p>
 					</div>
 					<div class="col-6 col-md-6 text-right">
+						<a href="/user/" class="mr-3">Авторизация</a>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
