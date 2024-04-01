@@ -2,7 +2,6 @@
 
 AddEventHandler("main", "OnBeforeUserRegister", Array("RegisterAddRole", "OnBeforeUserRegisterHandler"));
 
-
 class RegisterAddRole
 {
 	public static function OnBeforeUserRegisterHandler(&$arFields)
@@ -19,5 +18,28 @@ class RegisterAddRole
 		return $arFields;
 	}
 }
+
+
+
+$eventManager = \Bitrix\Main\EventManager::getInstance();
+
+$eventManager->addEventHandler('', 'AgentsOnBeforeUpdate', 'clearHLCache');
+$eventManager->addEventHandler('', 'AgentsOnBeforeAdd', 'clearHLCache');
+$eventManager->addEventHandler('', 'AgentsOnBeforeDelete', 'clearHLCache');
+
+function clearHLCache(\Bitrix\Main\Entity\Event $event) {
+	
+	$entity = $event->getEntity();
+    $tableName = $entity->getDBTableName();
+
+    $taggedCache = \Bitrix\Main\Application::getInstance()->getTaggedCache();
+	$taggedCache->clearByTag('hlblock_table_name_' . $tableName);
+
+
+	$result = new \Bitrix\Main\Entity\EventResult();
+    return $result;
+    
+}
+
 
 ?>
