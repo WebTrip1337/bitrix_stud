@@ -3,6 +3,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Мои объявления");
 ?><?
 
+$GLOBALS["newsFilter"] = Array(
+	"CREATED_BY" => $GLOBALS['USER']->GetID()
+);
+
 $APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"advertisement", 
